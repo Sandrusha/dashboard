@@ -104,7 +104,7 @@ h1 {
     display: none;
 }
 #addTask {
-    background-color: #218c74;
+    background-color: #e1b12c;
     border: none;
     padding: 0.5rem 1rem;
     text-transform: uppercase;
@@ -112,7 +112,7 @@ h1 {
     color: #1e272e;
 }
 #addTask:hover {
-    background-color: #33d9b2;
+    background-color: #fbc531;
     cursor: pointer;
     color: #353b48;
 }
