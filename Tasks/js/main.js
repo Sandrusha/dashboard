@@ -68,3 +68,11 @@ function dropTask() {
     var data = event.dataTransfer.getData("Id");
     event.target.appendChild(document.getElementById(data));
 }
+
+//add new task
+var addNewTask = document.getElementById("addTask");
+addNewTask.addEventListener("click", addNewTaskOnDashboard);
+
+function addNewTaskOnDashboard(){
+    
+}
