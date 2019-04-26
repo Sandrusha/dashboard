@@ -17,28 +17,28 @@
        <button id="btnManagement">Manager Mode</button>
     </div>
    <div class="tasksWrapper">
-       <div id="undefinedPile">
+       <div id="undefinedPile" class="pile">
            <div class="pileName">Undefined</div>
        </div>
-       <div id="notStartedPile">
+       <div id="notStartedPile" class="pile">
             <div class="pileName">Not Started</div>
        </div>
-       <div id="progressPile">
+       <div id="progressPile" class="pile">
             <div class="pileName">In Progress</div>
        </div>
-       <div id="blockedPile">
+       <div id="blockedPile" class="pile">
             <div class="pileName">Blocked</div>
        </div>
-       <div id="finishedPile">
+       <div id="finishedPile" class="pile">
             <div class="pileName">Done</div>
        </div>
        <div id="usersPile">
-            <div class="pileName">Users</div>
+            <div>Users</div>
        </div>
    </div>
    <div class="addTasks">
        <input type="text" id="taskTitle" placeholder="Title..">
-       <input type="text" class="taskDescription" placeholder="Description..">
+       <input type="text" id="taskDescription" placeholder="Description..">
        <select name="assigneeTask" id="taskOwner">
             <option disabled selected>Assignee To..</option>
             <option>Shelbie Kaye</option>

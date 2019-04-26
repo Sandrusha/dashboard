@@ -116,3 +116,7 @@ h1 {
     cursor: pointer;
     color: #353b48;
 }
+
+.hide {
+    visibility: hidden;
+}
