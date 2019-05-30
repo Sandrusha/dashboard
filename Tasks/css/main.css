@@ -19,6 +19,7 @@ h1 {
     text-transform: uppercase;
     background-color: rgba(255,255,255,0.1);
     padding: 1rem;
+    margin-bottom: 0;
 }
 /*-----GENERAL CSS-----*/
 .container {
@@ -30,15 +31,16 @@ h1 {
 .btnManag {
     text-align: right;
 }
-#btnManagement {
+#btnManager {
     background-color: #e1b12c;
     border: none;
     padding: 1rem;
     text-transform: uppercase;
     font-weight: bold;
     color: #1e272e;
+    width: 160px;
 }
-#btnManagement:hover {
+#btnManager:hover {
     background-color: #fbc531;
     cursor: pointer;
     color: #353b48;
@@ -47,7 +49,7 @@ h1 {
 .tasksWrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 .tasksWrapper > div {
     height: 480px;
@@ -79,13 +81,13 @@ h1 {
 #notStartedPile {
     background-color: #ff793f;
 }
-#progressPile {
+#progressPile, #undefinedPile {
     background-color: #34ace0;
 }
 #blockedPile {
     background-color: #ff5252;
 }
-#finishedPile {
+#finishedPile, #usersPile {
     background-color: #33d9b2;
 }
 /*-----ADD NEW TASK-----*/
@@ -116,7 +118,12 @@ h1 {
     cursor: pointer;
     color: #353b48;
 }
-
 .hide {
     visibility: hidden;
+}
+.none {
+    display: none;
+}
+.visible {
+    display: block!important;
 }

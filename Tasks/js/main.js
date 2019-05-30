@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var addNewTask = document.getElementById("addTask");
     addNewTask.addEventListener("click", addNewTaskOnDashboard);
 })
+
 function dragStartTask(ev) {
     ev.dataTransfer.setData("Id", ev.target.id);
     ev.dataTransfer.setData("parentId", ev.target.parentElement.id);
