@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+   <h1>Dashboard</h1>
+   <div class="btnManag">
+       <button id="btnManager">Manager Mode</button>
+    </div>
+   <div class="tasksWrapper">
+       <div id="undefinedPile" class="pile">
+           <div class="pileName">Undefined</div>
+       </div>
+       <div id="notStartedPile" class="pile">
+            <div class="pileName">Not Started</div>
+       </div>
+       <div id="progressPile" class="pile">
+            <div class="pileName">In Progress</div>
+       </div>
+       <div id="blockedPile" class="pile">
+            <div class="pileName">Blocked</div>
+       </div>
+       <div id="finishedPile" class="pile">
+            <div class="pileName">Done</div>
+       </div>
+       <div id="usersPile">
+            <div class="addUsers">
+               <input type="text" name="userName" placeholder="User Name" id="userName">
+               <button id="addUsersBtn">Add User</button>
+          </div>
+       </div>
+   </div>
+ 
+   <div class="addTasks">
+       <input type="text" id="taskTitle" placeholder="Title..">
+       <input type="text" id="taskDescription" placeholder="Description..">
+       <select name="assigneeTask" id="taskOwner">
+            <option disabled selected>Assignee To..</option>
+            <option>Shelbie Kaye</option>
+            <option>Ruby-Mae Fields</option>
+            <option>Shelbie Kaye</option>
+            <option>Daniaal Bob</option>
+       </select>
+       <select name="priorityTask" id="taskPriority">
+            <option disabled selected>Set Priority..</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+       </select>
+       <button id="addTask">Add</button>
+   </div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/manager.js"></script>
+<script src="js/stopwatch.js"></script>
+    
+</body>
+</html>
