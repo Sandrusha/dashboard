@@ -127,3 +127,10 @@ h1 {
 .visible {
     display: block!important;
 }
+.addUsers {
+    visibility: hidden;
+}
+
+.visibility {
+    visibility: visible;
+}

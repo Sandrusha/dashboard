@@ -72,6 +72,9 @@ function dropTask() {
             }
         } else {
             pile.appendChild(document.getElementById(taskId));
+            var taskElement = document.getElementById(taskId);
+            var reasonSpan = taskElement.getElementsByClassName("reason")[0];
+            reasonSpan.classList.add("hide");
         }
     }
 }

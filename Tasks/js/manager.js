@@ -16,17 +16,51 @@ function flipManagerMode() {
     document.getElementById("usersPile").style.flexBasis = "33%";
     document.getElementById("notStartedPile").style.flexBasis = "33%";
     document.getElementById("display").classList.add("hide");
+    document.getElementsByClassName("addUsers")[0].classList.add("visibility");
 }
 
-var users = document.getElementById("usersPile");
-var userDiv = document.createElement("div");
-users.appendChild(userDiv);
-var userName = document.createElement("span");
-userDiv.appendChild(userName); 
-var addUserDiv = document.createElement("div");
-users.appendChild(addUserDiv);
-var addUserInput = document.createElement("input");
-addUserDiv.appendChild(addUserInput);
-var addUserBtn = document.createElement("button");
-addUserDiv.appendChild(addUserBtn);
-addUserBtn.innerHTML = "Add user";
+class User {
+    constructor(name) {
+        this.name = name;   
+    }
+}
+
+userList = [];
+var user01 = new User("Alessandra Irving");
+var user02 = new User("Steve Coles");
+var user03 = new User("Maya North");
+var user04 = new User("Alessia Rivera");
+var user05 = new User("Primrose Phillips");
+
+userList.push(user01);
+userList.push(user02);
+userList.push(user03);
+userList.push(user04);
+userList.push(user05);
+
+document.addEventListener("DOMContentLoaded", function() {
+    for (i = 0; i < userList.length; i++) {
+        var user = userList[i];
+        addUserToPile(user);
+    }
+
+    var addUsersBtn = document.getElementById("addUsersBtn");
+    addUsersBtn.addEventListener('click', addUsers)
+})
+
+function addUserToPile(user) {
+    var userPile = document.getElementById("usersPile");
+    var userDiv = document.createElement("div");
+    userPile.appendChild(userDiv);
+    var userName = document.createElement("span");
+    userDiv.appendChild(userName); 
+    userName.innerHTML = user.name;    
+}
+
+function addUsers() {
+    var userName = document.getElementById("userName");
+    var newUser = new User(userName.value);
+    userList.push(newUser);
+    addUserToPile(newUser);
+}
+
