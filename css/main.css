@@ -1,3 +1,4 @@
+/*-----GENERAL CSS-----*/
 html, body {
     background-color: #1e272e;
     font-family: 'Raleway', sans-serif;
@@ -13,6 +14,10 @@ select, input, textarea {
     font-size: 1rem;
     padding-left: 0.5rem;
 }
+select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
 h1 {
     text-align: center;
     color: #7f8fa6;
@@ -21,12 +26,24 @@ h1 {
     padding: 1rem;
     margin-bottom: 0;
 }
-/*-----GENERAL CSS-----*/
 .container {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
 }
+.hide {
+    visibility: hidden;
+}
+.none {
+    display: none!important;
+}
+.visible {
+    display: block!important;
+}
+.visibility {
+    visibility: visible;
+}
+
 /*-----BTNS-----*/
 .btnManag {
     text-align: right;
@@ -45,6 +62,7 @@ h1 {
     cursor: pointer;
     color: #353b48;
 }
+
 /*-----TASKS-----*/
 .tasksWrapper {
     display: flex;
@@ -75,6 +93,8 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+/*-----PILES-----*/
 #undefinedPile, #usersPile {
     display: none;
 }
@@ -90,20 +110,21 @@ h1 {
 #finishedPile, #usersPile {
     background-color: #33d9b2;
 }
+#usersPile {
+    position: relative;
+}
+
 /*-----ADD NEW TASK-----*/
 .addTasks {
     display: flex;
     justify-content: space-between;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 .addTasks > button {
     flex-basis: 24%;
 }
 .addTasks > input, .addTasks > select {
     flex-basis: 21%;
-}
-#taskPriority {
-    display: none;
 }
 #addTask {
     background-color: #e1b12c;
@@ -118,19 +139,29 @@ h1 {
     cursor: pointer;
     color: #353b48;
 }
-.hide {
-    visibility: hidden;
-}
-.none {
-    display: none;
-}
-.visible {
-    display: block!important;
-}
-.addUsers {
-    visibility: hidden;
-}
 
-.visibility {
-    visibility: visible;
+/*ADD USERS*/
+.addUsers {
+    display: flex;
+    bottom: 0;
+    right:0;
+    left: 0;
+    position: absolute;
+    margin: 0!important;
+}
+#userName {
+    flex-basis: 60%;
+}
+#addUsersBtn {
+    flex-basis: 40%;
+    background-color: #e1b12c;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    font-weight: bold;
+    color: #1e272e;
+}
+#addUsersBtn:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }

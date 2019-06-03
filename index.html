@@ -33,13 +33,11 @@
             <div class="pileName">Done</div>
        </div>
        <div id="usersPile">
-            <div>Users</div>
+            <div class="addUsers">
+               <input type="text" name="userName" placeholder="User Name" id="userName">
+               <button id="addUsersBtn">Add User</button>
+          </div>
        </div>
-
-   </div>
-   <div class="addUsers">
-        <input type="text" name="userName" placeholder="User Name" id="userName">
-        <button id="addUsersBtn">Add User</button>
    </div>
    <div class="addTasks">
        <input type="text" id="taskTitle" placeholder="Title..">
@@ -51,7 +49,7 @@
             <option>Shelbie Kaye</option>
             <option>Daniaal Bob</option>
        </select>
-       <select name="priorityTask" id="taskPriority">
+       <select name="priorityTask" class="none" id="taskPriority">
             <option disabled selected>Set Priority..</option>
             <option>High</option>
             <option>Medium</option>
@@ -60,9 +58,6 @@
        <button id="addTask">Add</button>
    </div>
 </div>
-<script src="js/main.js"></script>
-<script src="js/manager.js"></script>
-<script src="js/stopwatch.js"></script>
-    
+<script src="js/main.js"></script> 
 </body>
 </html>
